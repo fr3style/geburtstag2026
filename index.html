@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efthimios' Trash-Party 2026</title>
+    <style>
+        /* BAD TASTE FARBPALETTE & STYLE */
+        :root {
+            --neon-pink: #ff007f;
+            --neon-green: #39ff14;
+            --neon-blue: #00f0ff;
+            --leopard-yellow: #ffdf00;
+            --dark-bg: #1a1a1a;
+            --card-bg: #2d2d2d;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Impact', 'Arial Black', sans-serif;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: white;
+            background-image: radial-gradient(var(--neon-pink) 1px, transparent 0), radial-gradient(var(--neon-blue) 1px, transparent 0);
+            background-size: 40px 40px;
+            background-position: 0 0, 20px 20px;
+            padding-bottom: 50px;
+        }
+
+        /* NAVIGATION BAR */
+        nav {
+            background: var(--neon-pink);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            border-bottom: 5px solid var(--neon-green);
+        }
+
+        nav a {
+            color: black;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 5px 10px;
+            background: var(--neon-green);
+            border: 2px solid black;
+            transform: rotate(-2deg);
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            transform: rotate(3deg) scale(1.1);
+            background: var(--neon-blue);
+        }
+
+        /* HEADER SECTION */
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(45deg, var(--neon-pink), var(--neon-blue));
+            border-bottom: 8px dashed var(--leopard-yellow);
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            color: var(--neon-green);
+            text-shadow: 4px 4px 0px black, -4px -4px 0px var(--neon-pink);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .motto-banner {
+            background: var(--leopard-yellow);
+            color: black;
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1.8rem;
+            transform: rotate(1deg);
+            border: 3px dashed black;
+            margin-top: 15px;
+        }
+
+        /* CONTAINER & SECTIONS */
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background: var(--card-bg);
+            border: 4px solid var(--neon-blue);
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 10px 10px 0px var(--neon-pink);
+        }
+
+        h2 {
+            color: var(--neon-green);
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            border-bottom: 3px dotted white;
+            padding-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        p, ul {
+            font-family: 'Arial', sans-serif;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .highlight-box {
+            background: rgba(255, 0, 127, 0.2);
+            border-left: 5px solid var(--neon-pink);
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .menu-grid { grid-template-columns: 1fr; }
+        }
+
+        .menu-card {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 15px;
+            border: 2px solid var(--leopard-yellow);
+        }
+
+        /* FORMULAR STYLES */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            font-family: 'Arial', sans-serif;
+        }
+
+        label {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: var(--neon-blue);
+        }
+
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 12px;
+            background: #111;
+            border: 2px solid var(--neon-pink);
+            color: white;
+            font-size: 1rem;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            border-color: var(--neon-green);
+        }
+
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 5px;
+        }
+
+        .radio-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+        }
+
+        button {
+            background: var(--neon-green);
+            color: black;
+            padding: 15px;
+            font-size: 1.5rem;
+            border: 3px solid black;
+            cursor: pointer;
+            box-shadow: 5px 5px 0px var(--neon-blue);
+            transition: 0.1s;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 7px 7px 0px var(--neon-pink);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="#infos">Wann & Wo</a>
+        <a href="#motto">Dresscode</a>
+        <a href="#food">Food & Drinks</a>
+        <a href="#rsvp">Zusage/Anmeldung</a>
+    </nav>
+
+    <!-- HEADER -->
+    <header>
+        <h1 class="hero-title">Efthimios wird älter!</h1>
+        <p style="font-size: 1.4rem; color: yellow;">Und es wird absolut geschmacklos...</p>
+        <div class="motto-banner">💥 MOTTO: BAD TASTE 💥</div>
+    </header>
+
+    <div class="container">
+
+        <!-- INFO SECTION -->
+        <section id="infos">
+            <h2>Wann & Wo?</h2>
+            <p>Packt eure Modesünden ein, wir eskalieren stilvoll!</p>
+            <div class="highlight-box">
+                <p>📅 <strong>Datum:</strong> [Trage hier dein Datum ein]</p>
+                <p>⏰ <strong>Uhrzeit:</strong> Ab [Trage hier die Uhrzeit ein] Uhr</p>
+                <p>📍 <strong>Location:</strong> [Trage hier deine Adresse ein]</p>
+            </div>
+            <p>Für alle, die eine weite Anreise haben oder einfach zu tief ins Glas geschaut haben: Ihr könnt nach Absprache auch gerne hier übernachten. Bitte gebt das einfach unten im Formular an!</p>
+        </section>
+
+        <!-- MOTTO SECTION -->
+        <section id="motto" style="border-color: var(--leopard-yellow); box-shadow: 10px 10px 0px var(--neon-green);">
+            <h2>Der Dresscode: Schlimmer geht immer</h2>
+            <p>Wer normal kommt, fliegt hochkant raus! Erlaubt ist alles, was den Augen wehtut. Inspiration gefällig?</p>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li>🧦 Socken in Sandalen (Der ungeschlagene König)</li>
+                <li>👖 Jogginghose kombiniert mit feinem Sakko</li>
+                <li>👾 Neonfarbene Trainingsanzüge aus den 80ern / 90ern</li>
+                <li>🐆 Völlig wilde Muster-Kombinationen (Streifen auf Leopard)</li>
+                <li>🕶️ Vokuhila-Perücken und getönte Sonnenbrillen</li>
+            </ul>
+        </section>
+
+        <!-- FOOD SECTION -->
+        <section id="food">
+            <h2>Speis & Trank</h2>
+            <p style="margin-bottom: 15px;">Kulinarisch brechen wir den Bad-Taste-Trend natürlich – es soll ja schmecken!</p>
+            
+            <div class="menu-grid">
+                <div class="menu-card">
+                    <h3 style="color: var(--neon-pink); margin-bottom: 8px;">🌯 Das Essen</h3>
+                    <p>Es gibt frisch zubereitetes, saftiges <strong>Gyros</strong> mit allem drum und dran! Für die Veggies und Veganer unter euch wird natürlich auch bestens gesorgt – gebt mir einfach im Formular Bescheid.</p>
+                </div>
+                <div class="menu-card">
+                    <h3 style="color: var(--neon-blue); margin-bottom: 8px;">🍹 Die Drinks</h3>
+                    <p>Allerlei Flüssiges! Von Bier über Softdrinks bis hin zu ein paar geschmacklosen Party-Longdrinks ist alles am Start. Wer etwas ganz Spezielles trinken will, darf seine Lieblings-Sünde natürlich gerne mitbringen.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- RSVP FORM SECTION -->
+        <section id="rsvp" style="border-color: var(--neon-pink); box-shadow: 10px 10px 0px var(--leopard-yellow);">
+            <h2>Gib mir Bescheid!</h2>
+            <p style="margin-bottom: 20px;">Bitte fülle das Formular aus, damit ich das Gyros und die Getränke perfekt planen kann.</p>
+            
+            <!-- HIER DEINE FORMSPREE-URL EINTRAGEN -->
+            <form action="https://formspree.io/f/mbdbqnwo" method="POST">
+                
+                <div>
+                    <label for="name">Dein Name (oder dein Trash-Promi-Name):</label>
+                    <input type="text" id="name" name="name" placeholder="Z. B. Cindy aus Marzahn" required>
+                </div>
+
+                <div>
+                    <label>Bist du dabei?</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="Teilnahme" value="Zusage" checked> Auf jeden Fall! Ich suche schon die Socken raus.
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="Teilnahme" value="Absage"> Nein, mein Modegeschmack ist zu edel (Ich kann nicht).
+                        </label>
+                    </div>
+                </div>
+
+                <div>
+                    <label>Brauchst du einen Schlafplatz?</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="Uebernachtung" value="Nein" checked> Nein, ich fahre/tanke nachts heim.
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="Uebernachtung" value="Ja"> Ja, ich würde gerne meine Isomatte bei dir aufschlagen.
+                        </label>
+                    </div>
+                </div>
+
+                <div>
+                    <label>Essens-Präferenz:</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="Ernaehrung" value="Gyros-Fleisch" checked> Ich liebe Gyros (Fleisch)
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="Ernaehrung" value="Vegetarisch"> Vegetarisch
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="Ernaehrung" value="Vegan"> Vegan
+                        </label>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="message">Nachricht an Efthimios (Musikwünsche, Beichten, etc.):</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Schreib mir was..."></textarea>
+                </div>
+
+                <button type="submit">Zusage abschicken! 🚀</button>
+            </form>
+        </section>
+
+    </div>
+
+</body>
+</html>
